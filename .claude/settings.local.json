@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cp /Users/rishi/Downloads/travela-1.0.0/index.html.bak /Users/rishi/Downloads/travela-1.0.0/index.html)",
+      "Bash(rm -f /Users/rishi/Downloads/travela-1.0.0/kerala.html /Users/rishi/Downloads/travela-1.0.0/tamil-nadu.html /Users/rishi/Downloads/travela-1.0.0/karnataka.html /Users/rishi/Downloads/travela-1.0.0/andamans.html /Users/rishi/Downloads/travela-1.0.0/kashmir.html /Users/rishi/Downloads/travela-1.0.0/north-east.html /Users/rishi/Downloads/travela-1.0.0/australia.html /Users/rishi/Downloads/travela-1.0.0/germany.html /Users/rishi/Downloads/travela-1.0.0/spain.html /Users/rishi/Downloads/travela-1.0.0/japan.html /Users/rishi/Downloads/travela-1.0.0/london.html /Users/rishi/Downloads/travela-1.0.0/char-dham.html /Users/rishi/Downloads/travela-1.0.0/manasarovar.html /Users/rishi/Downloads/travela-1.0.0/kedarnath.html /Users/rishi/Downloads/travela-1.0.0/vaishno-devi.html /Users/rishi/Downloads/travela-1.0.0/amarnath.html /Users/rishi/Downloads/travela-1.0.0/tirupati.html /Users/rishi/Downloads/travela-1.0.0/maldives.html /Users/rishi/Downloads/travela-1.0.0/bali.html /Users/rishi/Downloads/travela-1.0.0/switzerland.html /Users/rishi/Downloads/travela-1.0.0/andaman.html /Users/rishi/Downloads/travela-1.0.0/paris.html)"
+    ]
+  }
+}
