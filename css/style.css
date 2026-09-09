@@ -1231,6 +1231,13 @@
     position: relative;
 }
 
+.testimonial .testimonial-carousel .testimonial-item .testimonial-comment {
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .testimonial .testimonial-carousel .testimonial-item .testimonial-img {
     position: relative;
     width: 100px; 
