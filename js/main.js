@@ -22,15 +22,16 @@
     });
 
 
-    // Footer booking form -> email via Web3Forms
+    // Footer booking form and contact page form -> email via Web3Forms
     // Get a free access key at https://web3forms.com (enter the email that should receive enquiries)
     var WEB3FORMS_ACCESS_KEY = "684526b4-8122-41fb-98e5-0db1b633eff7";
 
-    $('#footerBookingForm').on('submit', function (e) {
+    $('#footerBookingForm, #contactForm').on('submit', function (e) {
         e.preventDefault();
         var $form = $(this);
         var $button = $form.find('button[type="submit"]');
-        var $status = $form.find('.footer-form-status');
+        var $status = $form.find('[role="status"]');
+        var buttonText = $button.text();
 
         var data = {};
         $.each($form.serializeArray(), function (_, field) {
@@ -49,7 +50,7 @@
             .then(function (response) { return response.json(); })
             .then(function (result) {
                 if (result.success) {
-                    $status.text('Thank you! Your enquiry has been sent. We will contact you soon.');
+                    $status.text('Thank you! Your message has been sent. We will contact you soon.');
                     $form[0].reset();
                 } else {
                     $status.text('Sorry, something went wrong. Please call us or try again.');
@@ -59,7 +60,7 @@
                 $status.text('Sorry, something went wrong. Please call us or try again.');
             })
             .finally(function () {
-                $button.prop('disabled', false).text('Book Now');
+                $button.prop('disabled', false).text(buttonText);
             });
     });
 

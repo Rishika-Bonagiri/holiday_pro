@@ -148,48 +148,54 @@
                             <div class="text-center mb-4">
                                 <i class="fa fa-phone-alt fa-3x text-primary mb-3"></i>
                                 <h4 class="text-primary">Mobile</h4>
-                                <p class="mb-0"><a href="tel:+919849547744" class="text-dark text-decoration-none">+91 9849547744</a></p>
-                                <p class="mb-0"><a href="tel:+918019407934" class="text-dark text-decoration-none">+91 8019407934</a></p>
+                                <p class="mb-0">Domestic Holidays: <a href="tel:+918019407934" class="text-dark text-decoration-none">+91 8019407934</a></p>
+                                <p class="mb-0">International Holidays: <a href="tel:+919000901293" class="text-dark text-decoration-none">+91 9000901293</a></p>
+                                <p class="mb-0">Air Ticketing: <a href="tel:+919849547744" class="text-dark text-decoration-none">+91 9849547744</a></p>
                             </div>
 
                             <div class="text-center">
                                 <i class="fa fa-envelope-open fa-3x text-primary mb-3"></i>
                                 <h4 class="text-primary">Email</h4>
                                 <p class="mb-0"><a href="mailto:moneypoint.knr@gmail.com" class="text-dark text-decoration-none">moneypoint.knr@gmail.com</a></p>
+                                <p class="mb-0"><a href="mailto:holidaypro2025@gmail.com" class="text-dark text-decoration-none">holidaypro2025@gmail.com</a></p>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-8">
                         <h3 class="mb-2">Send us a message</h3>
-                        <p class="mb-4">The contact form is currently inactive. Get a functional and working contact form with Ajax & PHP in a few minutes. Just copy and paste the files, add a little code and you're done. <a href="https://htmlcodex.com/contact-form">Download Now</a>.</p>
-                        <form>
+                        <!-- <p class="mb-4">The contact form is currently inactive. Get a functional and working contact form with Ajax & PHP in a few minutes. Just copy and paste the files, add a little code and you're done. <a href="https://htmlcodex.com/contact-form">Download Now</a>.</p> -->
+                        <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+                            <input type="hidden" name="subject" value="New Contact Message - Holiday Pro Website">
+                            <input type="hidden" name="from_name" value="Holiday Pro Website">
+                            <input type="checkbox" name="botcheck" class="d-none" tabindex="-1" autocomplete="off">
                             <div class="row g-3">
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control border-0" id="name" placeholder="Your Name">
+                                        <input type="text" class="form-control border-0" id="name" name="name" placeholder="Your Name" required>
                                         <label for="name">Your Name</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="email" class="form-control border-0" id="email" placeholder="Your Email">
+                                        <input type="email" class="form-control border-0" id="email" name="email" placeholder="Your Email" required>
                                         <label for="email">Your Email</label>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control border-0" id="subject" placeholder="Subject">
+                                        <input type="text" class="form-control border-0" id="subject" name="message_subject" placeholder="Subject">
                                         <label for="subject">Subject</label>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-floating">
-                                        <textarea class="form-control border-0" placeholder="Leave a message here" id="message" style="height: 160px"></textarea>
+                                        <textarea class="form-control border-0" placeholder="Leave a message here" id="message" name="message" style="height: 160px" required></textarea>
                                         <label for="message">Message</label>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <button class="btn btn-primary w-100 py-3" type="submit">Send Message</button>
+                                    <p class="mt-2 mb-0" role="status"></p>
                                 </div>
                             </div>
                         </form>
@@ -232,8 +238,10 @@
                             <h4 class="mb-4 text-white">Get In Touch</h4>
                             <a href="https://maps.app.goo.gl/pJX3E9Gy4enPsqoa6?g_st=ic" target="_blank" rel="noopener noreferrer"><i class="fas fa-home me-2"></i> 2-1-1425, 1st floor PEDDI plaza, Chemist Bhavan Road, Jyoti Nagar, Karimnagar, Telangana, 505001</a>
                             <a href="mailto:moneypoint.knr@gmail.com"><i class="fas fa-envelope me-2"></i> moneypoint.knr@gmail.com</a>
-                            <a href="tel:+919849547744"><i class="fas fa-phone me-2"></i> +91 9849547744</a>
-                            <a href="tel:+918019407934" class="mb-3"><i class="fas fa-phone me-2"></i> +91 8019407934</a>
+                            <a href="mailto:holidaypro2025@gmail.com"><i class="fas fa-envelope me-2"></i> holidaypro2025@gmail.com</a>
+                            <a href="tel:+918019407934"><i class="fas fa-phone me-2"></i> Domestic Holidays: +91 8019407934</a>
+                            <a href="tel:+919000901293"><i class="fas fa-phone me-2"></i> International Holidays: +91 9000901293</a>
+                            <a href="tel:+919849547744" class="mb-3"><i class="fas fa-phone me-2"></i> Air Ticketing: +91 9849547744</a>
                             <div class="d-flex align-items-center">
                                 <i class="fas fa-share fa-2x text-white me-2"></i>
                                 <a class="btn-square btn btn-primary rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
