@@ -922,19 +922,22 @@
 }
 
 /* carousel Start */
-.ExploreTour #InternationalTab-2 .InternationalTour-carousel .international-item {
-    position: relative;
-    overflow: hidden;
+.ExploreTour #NationalTab-1 .national-item img,
+.ExploreTour #SpiritualTab-3 .spiritual-item img,
+.ExploreTour #HoneymoonTab-4 .honeymoon-item img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
 }
 
-.ExploreTour #InternationalTab-2 .InternationalTour-carousel .owl-dots {
+.ExploreTour .tab-content .owl-carousel .owl-dots {
     margin-top: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.ExploreTour #InternationalTab-2 .InternationalTour-carousel .owl-dot {
+.ExploreTour .tab-content .owl-carousel .owl-dot {
     position: relative;
     display: inline-block;
     margin: 0 5px;
@@ -946,7 +949,7 @@
     transition: 0.5s;
 }
 
-.ExploreTour #InternationalTab-2 .InternationalTour-carousel .owl-dot.active {
+.ExploreTour .tab-content .owl-carousel .owl-dot.active {
     width: 40px;
     background: var(--bs-primary);
 }

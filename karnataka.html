@@ -289,10 +289,10 @@
                     <div class="col-md-6 col-lg-6 col-xl-3">
                         <div class="footer-item d-flex flex-column">
                             <h4 class="mb-4 text-white">Get In Touch</h4>
-                            <a href="https://maps.app.goo.gl/pJX3E9Gy4enPsqoa6?g_st=ic" target="_blank" rel="noopener noreferrer"><i class="fas fa-home me-2"></i> 1st floor PEDDI plaza, Chemist Bhavan Road, Jyoti Nagar, Karimnagar, 505001</a>
+                            <a href="https://maps.app.goo.gl/pJX3E9Gy4enPsqoa6?g_st=ic" target="_blank" rel="noopener noreferrer"><i class="fas fa-home me-2"></i> 2-1-1425, 1st floor PEDDI plaza, Chemist Bhavan Road, Jyoti Nagar, Karimnagar, Telangana, 505001</a>
                             <a href="mailto:moneypoint.knr@gmail.com"><i class="fas fa-envelope me-2"></i> moneypoint.knr@gmail.com</a>
-                            <a href="tel:+919849547744"><i class="fas fa-phone me-2"></i> 9849547744</a>
-                            <a href="tel:+918019407934" class="mb-3"><i class="fas fa-phone me-2"></i> 8019407934</a>
+                            <a href="tel:+919849547744"><i class="fas fa-phone me-2"></i> +91 9849547744</a>
+                            <a href="tel:+918019407934" class="mb-3"><i class="fas fa-phone me-2"></i> +91 8019407934</a>
                             <div class="d-flex align-items-center">
                                 <i class="fas fa-share fa-2x text-white me-2"></i>
                                 <a class="btn-square btn btn-primary rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
@@ -314,66 +314,105 @@
                     <div class="col-md-12 col-lg-12 col-xl-6">
                         <div class="footer-item d-flex flex-column">
                             <h4 class="mb-3 text-white">Book A Tour Deals</h4>
-                            <p class="text-white mb-3">Get <span class="text-warning">50% Off</span> On Your First Adventure Trip With Holiday Pro.</p>
-                            <form>
+                            <p class="text-white mb-3">Book Your Next Adventure Trip With Holiday Pro.</p>
+                            <form id="footerBookingForm" action="https://api.web3forms.com/submit" method="POST">
+                                <input type="hidden" name="subject" value="New Tour Booking Enquiry - Holiday Pro Website">
+                                <input type="hidden" name="from_name" value="Holiday Pro Website">
+                                <input type="checkbox" name="botcheck" class="d-none" tabindex="-1" autocomplete="off">
                                 <div class="row g-2">
                                     <div class="col-md-6">
                                         <div class="form-floating">
-                                            <input type="text" class="form-control bg-white border-0" id="footerBookName" placeholder="Your Name">
+                                            <input type="text" class="form-control bg-white border-0" id="footerBookName" name="name" placeholder="Your Name" required>
                                             <label for="footerBookName">Your Name</label>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-floating">
-                                            <input type="email" class="form-control bg-white border-0" id="footerBookEmail" placeholder="Your Email">
+                                            <input type="email" class="form-control bg-white border-0" id="footerBookEmail" name="email" placeholder="Your Email" required>
                                             <label for="footerBookEmail">Your Email</label>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
-                                        <div class="form-floating date" id="footerBookDate3" data-target-input="nearest">
-                                            <input type="text" class="form-control bg-white border-0" id="footerBookDatetime" placeholder="Date & Time" data-target="#footerBookDate3" data-toggle="datetimepicker" />
-                                            <label for="footerBookDatetime">Date & Time</label>
+                                        <div class="form-floating">
+                                            <input type="date" class="form-control bg-white border-0" id="footerBookDatetime" name="travel_date" placeholder="Travel Date">
+                                            <label for="footerBookDatetime">Travel Date</label>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-floating">
-                                            <select class="form-select bg-white border-0" id="footerBookSelect1">
-                                                <option value="1">Destination 1</option>
-                                                <option value="2">Destination 2</option>
-                                                <option value="3">Destination 3</option>
+                                            <select class="form-select bg-white border-0" id="footerBookSelect1" name="destination" required>
+                                                <option value="" selected disabled>Select a destination</option>
+                                                <optgroup label="Domestic">
+                                                    <option>Kerala</option>
+                                                    <option>Tamil Nadu</option>
+                                                    <option>Karnataka</option>
+                                                    <option>Himachal</option>
+                                                    <option>Kashmir</option>
+                                                    <option>North East</option>
+                                                    <option>Andaman</option>
+                                                </optgroup>
+                                                <optgroup label="International">
+                                                    <option>Australia</option>
+                                                    <option>Europe</option>
+                                                    <option>Singapore &amp; Malaysia</option>
+                                                    <option>Japan</option>
+                                                    <option>Nepal &amp; Bhutan</option>
+                                                    <option>Thailand</option>
+                                                    <option>Vietnam</option>
+                                                    <option>Bali</option>
+                                                    <option>Maldives</option>
+                                                    <option>Mauritius</option>
+                                                </optgroup>
+                                                <optgroup label="Spiritual">
+                                                    <option>Char Dham</option>
+                                                    <option>Kedarnath</option>
+                                                    <option>Amarnath</option>
+                                                    <option>Vaishno Devi</option>
+                                                    <option>Tirupati</option>
+                                                    <option>Ayodhya &amp; Varanasi</option>
+                                                    <option>Muktinath</option>
+                                                    <option>Kailash Manasarovar</option>
+                                                    <option>Karnataka Temples</option>
+                                                    <option>Tamil Nadu Temples</option>
+                                                </optgroup>
+                                                <option>Other / Not decided yet</option>
                                             </select>
                                             <label for="footerBookSelect1">Destination</label>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-floating">
-                                            <select class="form-select bg-white border-0" id="footerBookSelectPerson">
-                                                <option value="1">Persons 1</option>
-                                                <option value="2">Persons 2</option>
-                                                <option value="3">Persons 3</option>
+                                            <select class="form-select bg-white border-0" id="footerBookSelectPerson" name="persons">
+                                                <option>1</option>
+                                                <option selected>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option>5</option>
+                                                <option>6 or more</option>
                                             </select>
                                             <label for="footerBookSelectPerson">Persons</label>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-floating">
-                                            <select class="form-select bg-white border-0" id="footerBookCategoriesSelect">
-                                                <option value="1">Kids</option>
-                                                <option value="2">1</option>
-                                                <option value="3">2</option>
-                                                <option value="3">3</option>
+                                            <select class="form-select bg-white border-0" id="footerBookCategoriesSelect" name="package_type">
+                                                <option>Domestic</option>
+                                                <option>International</option>
+                                                <option>Spiritual</option>
+                                                <option>Honeymoon</option>
                                             </select>
-                                            <label for="footerBookCategoriesSelect">Categories</label>
+                                            <label for="footerBookCategoriesSelect">Package Type</label>
                                         </div>
                                     </div>
                                     <div class="col-12">
                                         <div class="form-floating">
-                                            <textarea class="form-control bg-white border-0" placeholder="Special Request" id="footerBookMessage" style="height: 80px"></textarea>
+                                            <textarea class="form-control bg-white border-0" placeholder="Special Request" id="footerBookMessage" name="special_request" style="height: 80px"></textarea>
                                             <label for="footerBookMessage">Special Request</label>
                                         </div>
                                     </div>
                                     <div class="col-12">
                                         <button class="btn btn-primary text-white w-100 py-2" type="submit">Book Now</button>
+                                        <p class="footer-form-status text-white mt-2 mb-0" role="status"></p>
                                     </div>
                                 </div>
                             </form>
